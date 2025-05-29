@@ -1,0 +1,73 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&display=swap');
+
+
+/* 초기화 */
+*{
+    margin:0;
+    padding: 0;
+   
+}
+body {
+
+   background-color: #d7b608; 
+}
+h2 {
+ color: #47957f;
+  font-size: 30px;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+  .wait {
+  /* 부모에 flex를 걸어서 자식(img)을 가로·세로 중앙 정렬 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 */
+  align-items: center;     /* 수직 중앙 */
+  /* (선택) 고정 높이가 필요하다면 아래처럼 지정 */
+  /* height: 500px; */
+}
+
+.wait img{
+    width: 200px;
+    height: 200px;
+    border-radius: 10%;
+}
+
+/* ---------수정----------------------- */
+/*아래의 설정은 최소 765px이상일 때 처리되는 내용*/
+@media screen and (min-width: 765px) {
+  /*반응형*/
+
+
+
+h2{
+ color: #47957f;
+  font-size: 3rem;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+  .wait {
+  /* 부모에 flex를 걸어서 자식(img)을 가로·세로 중앙 정렬 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 */
+  align-items: center;     /* 수직 중앙 */
+  /* (선택) 고정 높이가 필요하다면 아래처럼 지정 */
+  /* height: 500px; */
+}
+
+
+.wait img{
+    width: 500px;
+    height: 500px;
+     border-radius: 10%;
+}
+
+}

@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+/* 모바일 */
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #a28776;
+}
+
+.search{
+    width:320px;   
+    margin: 20px auto;  
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+    "map1 map1 map3"
+    "map2 map2 map3"
+    "map4 map4 map3";    
+  }
+
+  .search iframe, img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+    object-fit:cover;
+  }
+
+  .map1 {
+    grid-area: map1;
+  }
+  .map2 {
+    grid-area: map2;
+  }
+  .map3 {
+    grid-area: map3;
+  }
+  .map4 {
+    grid-area: map4;
+  }
+
+   .map5 {
+    display: none; 
+    grid-area: map5;
+  }
+
+
+
+
+
+
+
+
+
+/* 확장 */
+@media screen and (min-width: 765px) {
+.search{
+    width:700px;
+    height: 700px;   
+    margin: 20px auto;  
+    display: grid;
+    gap: 5px;
+    grid-template-areas:
+    "map1 map1 map1"
+    "map5 map5 map2"
+    "map4 map4 map4";    
+  }
+
+  .search iframe, img{
+    width:100%;
+    height:100%;
+    border-radius: 10px;
+    object-fit:cover;
+  }
+
+  .map1 {
+    grid-area: map1;
+  }
+  .map2 {
+    grid-area: map2;
+  }
+  .map3 {
+    display: none;
+    grid-area: map3;
+  }
+  .map4 {
+    grid-area: map4;
+  }
+
+   .map5 {
+     display: flex;
+    grid-area: map5;
+  }
+}
+

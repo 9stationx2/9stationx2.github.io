@@ -1,0 +1,256 @@
+﻿@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sunflower:wght@300&display=swap');
+
+/*초기화*/
+/*아래의 설정은 최대 765px이하일 때 처리되는 내용 : 기본은 모바일 사이즈*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+}
+
+/*헤더*/
+header {
+ 
+  color: #8f9092;
+  position: relative;
+}
+
+header h1 {
+  background-color: black;
+  
+  line-height: 80px;
+  text-align: center;
+  font-family: Gugi;
+  
+}
+
+
+
+/* .lnb ul a:hover{
+  color: white;
+} */
+
+/* 메뉴 컬러 */
+.about a:hover{
+  color: #47957f;
+}
+
+.month a:hover{
+  color: white;
+}
+
+.favor a:hover{
+  color: #d7b608;
+}
+
+.birth a:hover{
+  color: white;
+}
+
+.pair a:hover{
+  color: #d4115c;
+}
+
+.search a:hover{
+  color: #56453e;
+}
+
+.join a:hover{
+  color: #3d709f;
+}
+
+
+.lnb .menuAll {
+  /*모바일 사이즈가 기본인 상태*/
+  display: block;
+  width: 45px;
+  height: 34px;
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  background: url(../image/allmenu.png) no-repeat;
+  text-indent: -9999px; /*menuALL에 있는 '전체메뉴' 글자가 들여쓰기 되어 화면에 안보임*/
+}
+
+
+
+/* -------------------------------- */
+
+/* 섹션공통 */
+section:nth-of-type(2n + 1) {
+  /*여러 섹션 중 n번째타입(nth-of-type)-> 홀수번째만(2n + 1) */
+  background-color: #f2f0e4;
+  width: 100%;
+  height: 25vh;
+}
+
+section:nth-of-type(2n ) {
+  /*여러 섹션 중 n번째타입(nth-of-type)-> 홀수번째만(2n + 1) */
+  background-image: url(../image/coffee-cup.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #baaa91;
+  width: 100%;
+  height: 50vh;
+
+}
+
+
+section h2 {
+ display: none;
+}
+
+.container {
+  padding: 0 50px 50px;
+  
+}
+
+
+section img {
+  background-image: url(../image/coffee-cup.png);
+  
+}
+
+/* .index img {
+  display: none;
+} */
+.index p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+
+
+
+
+
+/*푸터*/
+
+footer {
+  background-color: black;
+  color: #8f9092;
+  padding-top: 30px;
+  font-family: Sunflower;
+}
+
+.sns {
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.sns li {
+  float: left;
+}
+
+.sns li a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-right: 20px;
+  background: url(../image/icon_sns_mono.png) no-repeat;
+  text-indent: -999px;
+}
+
+.sns li:nth-child(2) a {
+  background-position: -32px 0; /*이미지 모아놓은 것 이동시켜서 사용 : 메모리 절약*/
+} /*절대위치 : background-position: 0 0(좌우, 위아래아래로 이동);*/
+
+.sns li:nth-child(3) a {
+  background-position: -64px 0;
+}
+
+.sns li:nth-child(4) a {
+  background-position: -96px 0;
+}
+
+address {
+  font-size: normal;
+}
+
+/* ---------수정----------------------- */
+/*아래의 설정은 최소 765px이상일 때 처리되는 내용*/
+@media screen and (min-width: 765px) {
+  /*반응형*/
+ 
+
+  .lnb .menuAll {
+    /* 기본이 모바일 사이즈라 원래는 나와있으나, 사이즈가 클 때는 감춰지는 삼선 이미지*/
+  }
+
+  /*섹션 공통 */
+  .container {
+    max-width: 960px; /*  960/1920*100=50% 이므로 width:50% 또는 max-width:960px가변넓이 */
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+
+  .index p {
+    padding-top: 30px;
+  }
+
+  section:nth-of-type(2n + 1) {
+    /*여러 섹션 중 n번째타입(nth-of-type)-> 홀수번째만(2n + 1) */
+    background-color: #baaa91;
+    width: 100%;
+    height: 25vh;
+  }
+  
+section:nth-of-type(2n ) {
+  /* 여러 섹션 중 n번째타입(nth-of-type)-> 홀수번째만(2n + 1) */
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #baaa91;
+  width: 100%;
+  height: 25vh;
+}
+
+section h2 {
+  padding: 30px 0 50px;
+  text-align: center;
+  font-size: 3.5rem;
+  color:#a47764;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  font-family: Gugi;
+}
+
+section h2 span::after {
+  content: "";
+  height: 40px;
+  width: 3px;
+  background-color: #a47764;
+  display: inline-block;
+  animation:blink .7s ease-in-out infinite;
+}
+
+
+  /*푸터*/
+  footer address {
+    float: left;
+  }
+
+  .sns {
+    float: right;
+    margin-top: 0;
+  }
+
+  
+}
+
+

@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border:0;
+}
+
+
+table {
+    border-collapse: collapse; /* 테두리 사이 간격 없애기 */
+}
+
+body {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    font-family: "나눔고딕", "sans-serif";
+    font-size: 16px;
+    color: #333;
+    background-color:#87a4c2;
+}
+
+caption {
+    position: absolute;
+    left:9999em;
+}
+
+#join_wrap {
+    width:800px;
+    margin:0 auto;
+    
+}
+
+#join_wrap .title {
+    padding:50px 0 20px;
+    font-size:2em;
+    font-weight:700;
+    color: #09457b;
+}
+
+.joinTable th, .joinTable td {
+    padding:10px;
+    box-sizing:border-box;
+    border-bottom:1px solid #fff;
+    border-top: 1px solid #fff;
+}
+
+.joinTable th {
+    width:180px;
+    text-align:center;
+    background-color:#09457b;
+    color: #87a4c2;
+
+}
+.joinTable td {
+    width:620px;
+}
+
+.joinTable .first {
+    border-top:2px solid #fff;
+}
+
+.joinTable .textForm {
+    width:420px;
+    height:42px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:0px 10px;
+    box-sizing:border-box;
+}
+
+
+ .passForm {
+    width:210px;
+    height:42px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:0px 10px;
+    box-sizing:border-box;
+}
+
+.joinTable .btn {
+    width:80px;
+    height:42px;
+    background-color:#3d709f;
+    border:0;
+    border-radius:5px;
+    color:#fff;
+}
+
+.joinTable .btn_pwd {
+    width:100px;
+    height:42px;
+    background-color:#3d709f;
+    border:0;
+    border-radius:5px;
+    color:#fff;
+}
+
+.joinTable .textarea {
+    width:420px;
+    height:80px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:10px;
+    box-sizing:border-box;
+}
+
+.btn_area {
+    text-align:center;
+    margin:30px 0;
+}
+
+.btn_area button {
+    width:200px;
+    height:72px;
+    margin:0 10px;
+    border:0;
+    font-size:20px;
+    background-color:#062e52;
+    border-radius:5px;
+    color:#edd84b;
+}
+
+.btn_area .btn_join {
+    background-color:#8f9092;
+    border-radius:5px;
+    color:#fff;
+}
+
+/* #log {
+   width: 100%;
+   height: 90px;
+    text-align:center;
+    background-color: #09457b;
+    color: #edd84b;
+    line-height: 90px;
+} */
+

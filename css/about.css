@@ -1,0 +1,208 @@
+﻿@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+
+/*초기화*/
+/*아래의 설정은 최대 765px이하일 때 처리되는 내용 : 기본은 모바일 사이즈*/
+* {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+}
+
+
+
+
+/* -------------------------------- */
+
+/* 섹션공통 */
+section:nth-of-type(2n + 1) {
+  /*여러 섹션 중 n번째타입(nth-of-type)-> 홀수번째만(2n + 1) */
+  background-color: #abe9b3;
+}
+
+section:nth-of-type(2n ) {
+  /*여러 섹션 중 n번째타입(nth-of-type)-> 홀수번째만(2n + 1) */
+  background-color: #47957f;
+}
+
+section h2 {
+  padding: 30px 0 30px;
+  text-align: center;
+  font-size: 3rem;
+  color:#a47764;
+   font-family: "Nanum Pen Script", cursive;
+  
+}
+
+.container {
+  padding: 50px;
+  
+}
+
+  .coding {
+  /* 부모에 flex를 걸어서 자식(img)을 가로·세로 중앙 정렬 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 */
+  align-items: center;     /* 수직 중앙 */
+  /* (선택) 고정 높이가 필요하다면 아래처럼 지정 */
+  /* height: 500px; */
+}
+
+
+.coding img {
+
+width: 200px;
+height: 200px;
+border-radius: 50%;
+}
+
+.coding p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* 인용문 */
+.message {
+  padding-top: 50px;
+  text-align: center;
+}
+
+
+
+.message blockquote {
+  color: #baaa91;
+  font-size: 3rem;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 600;
+
+  font-style: italic;
+  margin: 20px 0 10px;
+}
+
+.message span {
+  color: #aaa;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "나눔 명조", sans-serif;
+  font-style: italic;
+  margin-bottom: 20px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* 내용 */
+.program div {
+  border: 1px solid #aaa;
+  background: linear-gradient(135deg, #abe9b3 0%, #47957f 100%);
+  
+  padding: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-width: 5px;
+    border-color: #56453e;
+
+   font-family: "Do Hyeon", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+    color: #56453e;
+   font-size: 1rem;
+}
+
+.program h3 {
+  font-family: "Dongle", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  text-align: center;
+   background-color: #baaa91;
+  color: #56453e;
+  border-radius: 10px;
+  margin-bottom: 20px;
+} 
+
+
+
+/* ---------수정----------------------- */
+/*아래의 설정은 최소 765px이상일 때 처리되는 내용*/
+@media screen and (min-width: 765px) {
+  /*반응형*/
+ 
+
+  /*섹션 공통 */
+  .container {
+    max-width: 960px; /*  960/1920*100=50% 이므로 width:50% 또는 max-width:960px가변넓이 */
+    margin: 0 auto;
+    overflow: hidden;
+    
+
+  
+  }
+
+  .coding {
+  /* 부모에 flex를 걸어서 자식(img)을 가로·세로 중앙 정렬 */
+  display: flex;
+  justify-content: center; /* 수평 중앙 */
+  align-items: center;     /* 수직 중앙 */
+  /* (선택) 고정 높이가 필요하다면 아래처럼 지정 */
+  /* height: 500px; */
+}
+
+  .coding img {
+    display: flex;
+    align-items: center;
+width: 500px;
+height: 500px;
+border-radius: 50%;
+  }
+  .coding p {
+    padding-top: 50px;
+  }
+
+  /*내용 */
+  .program {
+    width: 25%;
+    float: left;
+  }
+
+  .program div {
+    margin: 0 10px;
+    min-height: 350px;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: #56453e;
+  font-family: "Do Hyeon", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 0.7rem;
+   color: #56453e;
+   background: linear-gradient(135deg, #abe9b3 0%, #47957f 100%);
+  }
+
+ .program h3 {
+  font-family: "Dongle", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  background-color: #baaa91;
+  color: #56453e;
+  border-radius: 5px;
+  margin-bottom: 50px;
+} 
+
+}

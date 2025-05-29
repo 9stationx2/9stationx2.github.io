@@ -1,0 +1,62 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+/* 초기화 */
+*{
+    margin:0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+
+
+
+/* aside */
+aside {
+  position: fixed;
+  top: 80px;
+  right: -220px;   /* 숨겨진 상태 */
+  width: 220px;
+  height: 100%;
+  padding: 20px;
+  background: #f2f0e4;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+   font-family: Gugi;
+}
+
+/* 열렸을 때 클래스 추가 */
+aside.open {
+  /* JavaScript에서 right:0으로 애니메이션 */
+}
+
+/* 사이드 내비 & 버튼 */
+aside #asidenav ul { margin-top: 20px; }
+
+aside #asidenav a{
+    display: block;
+    height: 36px;
+    border: 1px solid #ddd;
+    text-align: center;
+    margin-bottom: 5px;
+    line-height: 36px;
+}
+
+aside #asidenav a:hover{
+    background: #333;
+    color: #fff;
+}
+
+aside button {
+  position: absolute;
+  top: 150px;
+  left: -52px;
+  width: 52px;
+  height: 132px;
+  cursor: pointer;
+}

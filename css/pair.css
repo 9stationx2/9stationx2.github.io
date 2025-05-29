@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+/* CSS 리셋 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---- 전체 적용 ---- */
+body {
+  /*background-color: #111; */ /* 배경색 */
+  background-image:url(../image/birth_back.png);
+  color: #fff;  /* 글자색 */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Jua, sans-serif, serif;
+}
+section {
+  padding: 40px 10%;
+}
+section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #303030;
+}
+section h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+
+
+/* ----- 선택 가이드 영역 ----- */
+#choice p {
+  font-size: 22px;
+  color: rgba(255, 255, 255, 0.7);
+  /* margin-bottom: 30px; */
+}
+.choice-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+.card {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  background-color: #FF537A;
+  /* background: linear-gradient(to bottom, rgba(25,32,68,1) 0%, rgba(32,19,34,1) 62%);  */
+  padding: 40px;
+  height: 300px;
+  position:relative;
+}
+.bean-img {
+  width:80px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+.bean-img img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---- 반응형 (선택 가이드 영역) ---- */
+@media only screen and (max-width: 768px) {
+  .card {
+    flex-basis: 100%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1220px) {
+  .card {
+    flex-basis: calc(50% - 15px);
+  }
+}
+
+/* ----- FAQ 영역 ----- */
+
+.faq .accordion {
+  width: 100%;
+  max-width: 750px;
+  margin: 60px auto;
+ 
+}
+.accordion li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+  
+}
+.accordion li label {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 25px;
+  font-weight: 500;
+  background: #46DF8B;
+  margin-bottom :2px;
+  cursor: pointer;
+  position: relative;
+   border-radius: 10px;
+}
+.accordion li label::after {
+  content: '\2b';
+  font-size: 40px;
+  position: absolute;
+  right: 20px;  
+  transition: 0.5s;
+}
+.accordion input[type="radio"] {
+  display: none;
+}
+.accordion .content {
+  background: #3b3b3b;
+  font-size: 22px;
+  line-height: 1.6;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.accordion input[type="radio"]:checked + label + .content {  /* input[type="radio"]에 체크하면 */
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after {  /* input[type="radio"]에 체크하면 */
+  transform: rotate(-135deg);
+}
+
+

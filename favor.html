@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>커피취향</title>
+<link href="./css/favor.css" rel="stylesheet"/>
+
+</head>
+<body>
+  <div id="slide">
+    <div id="wrap">
+      <ul>
+        <li><img src="./image/drip.png" alt="Slide 1" /></li>
+        <li><img src="./image/espresso.png" alt="Slide 2" /></li>
+        <li><img src="./image/dripBag.png" alt="Slide 3" /></li>
+      </ul>
+    </div>
+    <div class="controls"></div>
+  </div>
+  <div class="container">
+        <article class="program">
+          <!--시멘틱 태그-->
+
+          <div>
+            <h3>핸드드립</h3>
+         
+          </div>
+        </article>
+        <article class="program">
+          <div>
+            <h3>에스프레소</h3>
+         
+          </div>
+        </article>
+       
+        <article class="program">
+          <div>
+            <h3>드립백</h3>
+        
+          </div>
+        </article>
+      
+      </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    $(function() {
+      var $wrap = $('#wrap ul');
+      var $slides = $wrap.find('li');
+      var slideCount = $slides.length;
+      var slideWidth = $('#slide').width();
+      var currentIndex = 0;
+      var autoSlide;
+      var $controls = $('.controls');
+
+            // 1) 각 슬라이드에 쓸 아이콘 클래스를 배열로 정의
+      
+
+      // 2) 아이콘 버튼 동적 생성
+      for (var i = 0; i < slideCount; i++) {
+        $controls.append(
+          '<button class="nav" data-index="' + i + '">' +
+            '' +
+          '</button>'
+        );
+      }
+
+      function moveTo(index) {
+        $wrap.css('left', -slideWidth * index + 'px');
+        currentIndex = index;
+        updatePagination();
+      }
+
+      function updatePagination() {
+        $('.controls .nav').removeClass('active')
+          .filter('[data-index="' + currentIndex + '"]').addClass('active');
+      }
+
+      $('.controls').on('click', '.nav', function() {
+        moveTo(+$(this).attr('data-index'));
+      });
+
+      // 자동 슬라이드
+      function startAuto() {
+        autoSlide = setInterval(function() {
+          moveTo((currentIndex + 1) % slideCount);
+        }, 3000);
+      }
+      function stopAuto() {
+        clearInterval(autoSlide);
+      }
+
+      moveTo(0);
+      startAuto();
+      $('#slide').hover(stopAuto, startAuto);
+    });
+ 
+  </script>
+</body>
+</html>

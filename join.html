@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link href="./css/join.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="join_wrap">
+
+        <!-- <h1 id="log">회원가입</h1> -->
+
+        <form action="./index.html" target=""   method="get" >
+
+         
+
+            <fieldset>
+                <legend class="title">* 필수입력정보</legend>
+                <table class="joinTable">
+                    <caption>회원가입 필수입력표</caption>
+                    <tr>
+                        <th class="first"><label>아이디</label></th>
+                        <td class="first"><input type="text" class="textForm" name="user_id">
+                        <input type="button" value="중복확인" class="btn">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th><label>비밀번호</label></th>
+                        <td><input type="password"  class="passForm" id="user_pwd">
+                            <input type="password"  class="passForm" id="user_pwd2">
+                            <input type="button" onclick="test()" class="btn"  value="중복확인">
+                            
+                        </td>
+                        
+                    </tr>
+                    <tr>
+                        <th><label>이름</label></th>
+                        <td><input type="text"  class="textForm" name="user_name"></td>
+                    </tr>
+                    <tr>
+                        <th><label>연락처</label></th>
+                        <td><input type="tel"  class="textForm" name="user_tel"></td>
+                    </tr>
+                    <tr>
+                        <th><label>이메일</label></th>
+                        <td><input type="email"  class="textForm"name="user_email"></td>
+                    </tr>
+                    <tr>
+                        <th><label>전자우편 신청</label></th>
+                        <td><input type="radio" name="user_email_ok" value="1">예, 신청합니다.
+                            <input type="radio" name="user_email_ok" value="0">아니오, 신청하지 않습니다. 
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            
+
+
+
+
+
+            <fieldset>
+                <legend class="title">* 선택입력정보</legend>
+                <table class="joinTable">
+                    <caption>회원가입 선택입력표</caption>
+                    <tr>
+                        <th><label>프로필 사진</label></th>
+                        <td><input type="file" name="user_file_name"> </td>
+                    </tr>
+                    <tr>
+                        <th><label>생년월일</label></th>
+                        <td ><input type="date"  class="textForm" name="user_year"> </td>
+                    </tr>
+                    <tr>
+                        <th><label>성별</label></th>
+                        <td><input type="radio" name="sex" value="남">남 
+                        <input type="radio" name="sex" value="여">여
+                    </td>
+                    </tr>
+                    <tr>
+                        <th><label>직업</label></th>
+                        <td><select  class="textForm" name="job">
+                            <option>회사원</option>
+                            <option>기술자</option>
+                            <option selected>학생</option>
+                        </select>
+                             </td>
+                    </tr>
+                    
+                </table>
+            </fieldset>
+
+        
+        <div class="btn_area"> 
+            <button type="submit">회원가입</button>
+            <button type="reset" class="btn_join">취소</button>
+        </div>
+
+
+    </form>
+
+
+    </div>
+<script src="./js/join.js"></script>
+</body>
+</html>

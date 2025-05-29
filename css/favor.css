@@ -1,0 +1,184 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+body{
+  background-image: url("../image/back3.png");
+  background-repeat:initial;
+}
+
+    #slide { width: 320px; height: 240px; margin: 50px auto; position: relative; overflow: hidden; }
+
+    #wrap ul {
+      list-style: none;
+      position: relative;
+      width: 9999px;
+      left: 0;
+      transition: left 0.5s;
+    }
+    #wrap ul li {
+      float: left;
+      width: 320px;
+      height: 240px;
+      
+    }
+    #wrap ul li img { display: block; 
+      width: 100%; height: 100%; 
+      object-fit: cover; 
+      border: none;
+     }
+
+    .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      
+    }
+    .controls button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      width: 5px;
+      height: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+    .controls button:hover { background: rgba(0, 0, 0, 0.8); }
+    .controls button.active {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      cursor: default;
+    }
+
+    /* 내용 */
+.program div {
+  border: 1px solid #aaa;
+  background: linear-gradient(135deg, #e4c7b9 0%, #a47764 100%);
+  
+  padding: 30px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-width: 5px;
+    border-color: #56453e;
+    border-style: dotted;
+
+   font-family: "Jua", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  text-align: center;
+    color: #56453e;
+   font-size: 1rem;
+}
+
+.program h3 {
+  font-family: "Jua", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3rem;
+  text-align: center;
+  
+  color: #56453e;
+  border-radius: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+} 
+
+
+    /*아래의 설정은 최소 765px이상일 때 처리되는 내용*/
+@media screen and (min-width: 765px) {
+  /*반응형*/
+    #slide { width: 620px; height: 540px; margin: 50px auto; position: relative; overflow: hidden; }
+
+    #wrap ul {
+      list-style: none;
+      position: relative;
+      width: 9999px;
+      left: 0;
+      transition: left 0.5s;
+    }
+    #wrap ul li {
+      float: left;
+      width: 620px;
+      height: 540px;
+    }
+    #wrap ul li img { 
+      display: block; 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover;
+     border: none;
+     ;
+    }
+    .controls {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+    .controls button {
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: #fff;
+      width: 5px;
+      height: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      border-radius: 50%;
+      transition: background 0.3s;
+    }
+    .controls button:hover { background: rgba(0, 0, 0, 0.8); }
+    .controls button.active {
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      cursor: default;
+    }
+
+    /*내용 */
+  .program {
+    width: 33%;
+    float: left;
+  }
+
+  .program div {
+    margin: 0 10px;
+    margin-bottom: 50px;
+    min-height: auto;
+    border-radius: 20px;
+    border-width: 5px;
+    border-color: #56453e;
+      border-style: double;
+
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 0.7rem;
+   color: #56453e;
+   background: linear-gradient(135deg, #e4c7b9 0%, #a47764 100%);
+  }
+
+ .program h3 {
+  font-family: "Jua", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 1.6rem;
+  text-align: center;
+  
+  color: #56453e;
+  border-radius: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+} 
+
+    
+}
